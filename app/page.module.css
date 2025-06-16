@@ -184,3 +184,20 @@ a.secondary {
   border-radius: 5px;
   text-align: center;
 }
+
+.tableContainer {
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
+}
+
+:global(fieldset) {
+  border-color: var(--foreground) !important;
+}
+
+:global(label) {
+  color: var(--foreground) !important;
+}
+
+:global(input) {
+  color: var(--foreground) !important;
+}

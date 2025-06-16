@@ -52,17 +52,17 @@ export default function Home() {
           <li>Hit the <code>Search</code> button and see your results instantly.</li>
         </ol>
 
-        <TextField id="outlined-basic" label="Search" variant="outlined" onChange={(e) => setQuery(e.target.value)} value={query} />
+        <TextField id="outlined-basic" label="Search" variant="outlined" onChange={(e) => setQuery(e.target.value)} value={query} className={styles.tableContainer} />
         <Button variant="contained" onClick={() => GetTvShowResults()}>Search TV Shows</Button>
         {/* <pre>{JSON.stringify(tvShowSearchItems, null, 2)}</pre> */}
 
         <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 200 }} aria-label="simple table">
+          <Table sx={{ minWidth: 200 }} aria-label="simple table" className={styles.tableContainer}>
             <TableHead>
               <TableRow>
-                <TableCell>Name</TableCell>
-                <TableCell>Genre</TableCell>
-                <TableCell></TableCell>
+                <TableCell className={styles.tableContainer}>Name</TableCell>
+                <TableCell className={styles.tableContainer}>Genre</TableCell>
+                <TableCell className={styles.tableContainer}></TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -71,10 +71,10 @@ export default function Home() {
                   key={item.show.id}
                   sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                 >
-                  <TableCell component="th" scope="row">
+                  <TableCell component="th" scope="row" className={styles.tableContainer}>
                     {item.show.name}
                   </TableCell>
-                  <TableCell>{item.show.genres[0]}</TableCell>
+                  <TableCell className={styles.tableContainer}>{item.show.genres[0]}</TableCell>
                   <TableCell>{item.show.image && (
                     // <img src={item.show.image.medium} />
                     <Image
