@@ -16,6 +16,7 @@ import { TvShowSearchResult } from "@/models/tv-show";
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
+import Divider from '@mui/material/Divider';
 
 export default function Home() {
   const [query, setQuery] = useState("columbus");
@@ -148,24 +149,32 @@ export default function Home() {
           />
           Examples
         </a> */}
-        Illustration by
-        <a href="https://unsplash.com/@wwllaaddaa?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Vladimir Nikolic</a>
-        on <a href="https://unsplash.com/illustrations/a-black-and-white-drawing-of-a-tv-ZII9ZhonGZU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+        <div className={styles.item}>
+          Illustration by
+          <a href="https://unsplash.com/@wwllaaddaa?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Vladimir Nikolic</a>
+          on <a href="https://unsplash.com/illustrations/a-black-and-white-drawing-of-a-tv-ZII9ZhonGZU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+        </div>
+        {/* <Divider component="li" /> */}
+        <div className={styles.item}>
+          <a
+            href="https://www.tvmaze.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              aria-hidden
+              src="/globe.svg"
+              alt="Globe icon"
+              width={16}
+              height={16}
 
-        <a
-          href="https://www.tvmaze.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to tvmaze.com →
-        </a>
+            />
+            <span style={{ marginLeft: 5 }}>
+              Go to tvmaze.com →
+            </span>
+          </a>
+        </div>
+
       </footer>
     </div>
   );
