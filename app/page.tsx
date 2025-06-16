@@ -16,7 +16,6 @@ import { TvShowSearchResult } from "@/models/tv-show";
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
-import Divider from '@mui/material/Divider';
 
 export default function Home() {
   const [query, setQuery] = useState("columbus");
