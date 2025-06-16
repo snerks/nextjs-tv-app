@@ -44,7 +44,8 @@ export default function Home() {
         <Typography variant="h4" gutterBottom>
           TV Show Search
         </Typography>
-        <ol>
+
+        <ol className="hidden-mobile">
           <li>
             Enter a search term in the <code>Search</code> box.
           </li>
