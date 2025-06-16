@@ -52,9 +52,6 @@ export default function Home() {
           <li>Hit the <code>Search</code> button and see your results instantly.</li>
         </ol>
 
-        {/* <input type="text" onChange={(e) => setQuery(e.target.value)} value={query} />
-        <button type="button" onClick={() => GetTvShowResults()}>Get TV Shows for [{query}]</button> */}
-
         <TextField id="outlined-basic" label="Search" variant="outlined" onChange={(e) => setQuery(e.target.value)} value={query} />
         <Button variant="contained" onClick={() => GetTvShowResults()}>Search TV Shows</Button>
         {/* <pre>{JSON.stringify(tvShowSearchItems, null, 2)}</pre> */}
