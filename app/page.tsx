@@ -90,68 +90,15 @@ export default function Home() {
             </TableBody>
           </Table>
         </TableContainer>
-
-        {/* <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div> */}
       </main>
+
       <footer className={styles.footer}>
-        {/* <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a> */}
         <div className={styles.item}>
           Illustration by
           <a href="https://unsplash.com/@wwllaaddaa?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Vladimir Nikolic</a>
           on <a href="https://unsplash.com/illustrations/a-black-and-white-drawing-of-a-tv-ZII9ZhonGZU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
         </div>
-        {/* <Divider component="li" /> */}
+
         <div className={styles.item}>
           <a
             href="https://www.tvmaze.com"

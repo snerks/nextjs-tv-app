@@ -92,7 +92,8 @@ a.secondary {
 .footer {
   grid-row-start: 3;
   display: flex;
-  gap: 24px;
+  gap: 1px;
+  margin-top: 40px;
 }
 
 .footer a {
@@ -179,7 +180,7 @@ a.secondary {
 .item {
   /* background-color: #007bff;
   color: white; */
-  padding: 15px;
+  padding: 3px;
   border-radius: 5px;
   text-align: center;
 }
