@@ -132,13 +132,13 @@ a.secondary {
     padding-bottom: 80px;
   }
 
-  .main {
+  /* .main {
     align-items: center;
-  }
+  } */
 
-  .main ol {
+  /* .main ol {
     text-align: center;
-  }
+  } */
 
   .ctas {
     flex-direction: column;

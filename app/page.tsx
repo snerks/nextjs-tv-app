@@ -57,7 +57,7 @@ export default function Home() {
         {/* <pre>{JSON.stringify(tvShowSearchItems, null, 2)}</pre> */}
 
         <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 650 }} aria-label="simple table">
+          <Table sx={{ minWidth: 200 }} aria-label="simple table">
             <TableHead>
               <TableRow>
                 <TableCell>Name</TableCell>
