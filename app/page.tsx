@@ -1,9 +1,21 @@
 "use client";
 
+import * as React from 'react';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+
 import Image from "next/image";
 import styles from "./page.module.css";
 import { useState } from "react";
 import { TvShowSearchResult } from "@/models/tv-show";
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+import Typography from '@mui/material/Typography';
 
 export default function Home() {
   const [query, setQuery] = useState("columbus");
@@ -23,70 +35,65 @@ export default function Home() {
       <main className={styles.main}>
         <Image
           className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
+          src="/vladimir-nikolic-ZII9ZhonGZU-unsplash.svg"
+          alt="TV logo"
+          width={76}
+          height={76}
           priority
         />
+        <Typography variant="h4" gutterBottom>
+          TV Show Search
+        </Typography>
         <ol>
           <li>
-            Get started by editing <code>app/page.tsx</code>.
+            Enter a search term in the <code>Search</code> box.
           </li>
-          <li>Save and see your changes instantly.</li>
+          <li>Hit the <code>Search</code> button and see your results instantly.</li>
         </ol>
 
-        <input type="text" onChange={(e) => setQuery(e.target.value)} value={query} />
-        <button type="button" onClick={() => GetTvShowResults()}>Get TV Shows for [{query}]</button>
+        {/* <input type="text" onChange={(e) => setQuery(e.target.value)} value={query} />
+        <button type="button" onClick={() => GetTvShowResults()}>Get TV Shows for [{query}]</button> */}
+
+        <TextField id="outlined-basic" label="Search" variant="outlined" onChange={(e) => setQuery(e.target.value)} value={query} />
+        <Button variant="contained" onClick={() => GetTvShowResults()}>Search TV Shows</Button>
         {/* <pre>{JSON.stringify(tvShowSearchItems, null, 2)}</pre> */}
-        {/* <ul>
-          {tvShowSearchItems.map(item => <li key={item.show.id}>{item.show.name}</li>)}
-        </ul> */}
 
-        <table border={1}>
-          <thead>
-            <tr>
-              <th style={{ textAlign: "left" }}>Name</th>
-              <th style={{ textAlign: "left" }}>Genre</th>
-              <th>Image</th>
-            </tr>
-          </thead>
-          <tbody>
-            {tvShowSearchItems.map(item => (
-              <tr key={item.show.id}>
-                <td>{item.show.name}</td>
-                <td>{item.show.genres[0]}</td>
-                <td><img src={item.show.image.medium} /></td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <TableContainer component={Paper}>
+          <Table sx={{ minWidth: 650 }} aria-label="simple table">
+            <TableHead>
+              <TableRow>
+                <TableCell>Name</TableCell>
+                <TableCell>Genre</TableCell>
+                <TableCell></TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {tvShowSearchItems.map(item => (
+                <TableRow
+                  key={item.show.id}
+                  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                >
+                  <TableCell component="th" scope="row">
+                    {item.show.name}
+                  </TableCell>
+                  <TableCell>{item.show.genres[0]}</TableCell>
+                  <TableCell>{item.show.image && (
+                    // <img src={item.show.image.medium} />
+                    <Image
+                      aria-hidden
+                      src={item.show.image.medium}
+                      alt="TV show image"
+                      width={96}
+                      height={144}
+                    />
+                  )}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
 
-        <table className="min-w-full border border-gray-300 rounded-lg shadow-md">
-          <thead className="bg-gray-100">
-            <tr>
-              <th className="px-4 py-2 text-left text-gray-600 font-medium">Name</th>
-              <th className="px-4 py-2 text-left text-gray-600 font-medium">Age</th>
-              <th className="px-4 py-2 text-left text-gray-600 font-medium">City</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr className="border-t border-gray-300 hover:bg-gray-50 transition">
-              <td className="px-4 py-2">Alice</td>
-              <td className="px-4 py-2">25</td>
-              <td className="px-4 py-2">London</td>
-            </tr>
-            <tr className="border-t border-gray-300 hover:bg-gray-50 transition">
-              <td className="px-4 py-2">Bob</td>
-              <td className="px-4 py-2">30</td>
-              <td className="px-4 py-2">Bristol</td>
-            </tr>
-          </tbody>
-        </table>
-
-
-
-        <div className={styles.ctas}>
+        {/* <div className={styles.ctas}>
           <a
             className={styles.primary}
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
@@ -110,10 +117,10 @@ export default function Home() {
           >
             Read our docs
           </a>
-        </div>
+        </div> */}
       </main>
       <footer className={styles.footer}>
-        <a
+        {/* <a
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
@@ -140,9 +147,13 @@ export default function Home() {
             height={16}
           />
           Examples
-        </a>
+        </a> */}
+        Illustration by
+        <a href="https://unsplash.com/@wwllaaddaa?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Vladimir Nikolic</a>
+        on <a href="https://unsplash.com/illustrations/a-black-and-white-drawing-of-a-tv-ZII9ZhonGZU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
         <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          href="https://www.tvmaze.com"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -153,7 +164,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Go to nextjs.org →
+          Go to tvmaze.com →
         </a>
       </footer>
     </div>
