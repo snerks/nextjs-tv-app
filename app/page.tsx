@@ -52,7 +52,49 @@ export default function Home() {
           <li>Hit the <code>Search</code> button and see your results instantly.</li>
         </ol>
 
-        <TextField id="outlined-basic" label="Search" variant="outlined" onChange={(e) => setQuery(e.target.value)} value={query} className={styles.tableContainer} />
+        <TextField
+          id="outlined-basic" label="Search" variant="outlined"
+          onChange={(e) => setQuery(e.target.value)} value={query} className={styles.tableContainer}
+          sx={{
+            "& .MuiOutlinedInput-root": {
+              color: "var(--foreground)", // Text color
+              backgroundColor: "var(--background)", // Background color
+              "& .MuiOutlinedInput-notchedOutline": {
+                borderColor: "var(--foreground)", // Border color
+              },
+              "&.Mui-focused": {
+                backgroundColor: "var(--background)", // Background when focused
+                borderColor: "var(--background)",
+              },
+            },
+            "& .MuiInputLabel-outlined": {
+              color: "var(--foreground)", // Label color
+            },
+          }}
+        />
+
+        {/* <div style={{ backgroundColor: "var(--background-color)", color: "var(--primary-color)" }}> */}
+        {/* <TextField
+          label="Custom TextField"
+          variant="outlined"
+          sx={{
+            "& .MuiOutlinedInput-root": {
+              color: "var(--foreground)", // Text color
+              backgroundColor: "var(--background)", // Background color
+              "& .MuiOutlinedInput-notchedOutline": {
+                borderColor: "var(--foreground)", // Border color
+              },
+              "&.Mui-focused": {
+                backgroundColor: "var(--background)", // Background when focused
+                borderColor: "var(--background)",
+              },
+            },
+            "& .MuiInputLabel-outlined": {
+              color: "var(--foreground)", // Label color
+            },
+          }}
+        /> */}
+
         <Button variant="contained" onClick={() => GetTvShowResults()}>Search TV Shows</Button>
         {/* <pre>{JSON.stringify(tvShowSearchItems, null, 2)}</pre> */}
 

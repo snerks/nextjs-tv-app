@@ -190,14 +190,62 @@ a.secondary {
   color: var(--foreground) !important;
 }
 
-:global(fieldset) {
+/* 
+<div class="MuiFormControl-root MuiTextField-root page-module__E0kJGG__tableContainer css-1xp5r68-MuiFormControl-root-MuiTextField-root">
+  <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root" data-shrink="true" for="outlined-basic" id="outlined-basic-label">Search</label>
+
+  <div class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root">
+    <input aria-invalid="false" id="outlined-basic" type="text" class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input" value="columbus">
+
+    <fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline">
+      <legend class="css-w1u3ce"><span>Search</span></legend>
+    </fieldset>
+
+  </div>
+</div>
+ */
+/* .themedFieldset :global(fieldset) {
+  border-color: var(--foreground) !important;
+} */
+
+div.MuiFormControl-root * {
+  background-color: var(--background) !important;
+  color: var(--foreground) !important;
   border-color: var(--foreground) !important;
 }
 
-:global(label) {
-  color: var(--foreground) !important;
-}
+/* #outlined-basic ~ fieldset {
+  border-color: var(--foreground) !important;
+} */
 
-:global(input) {
+/* fieldset {
+  border-color: var(--foreground) !important;
+} */
+
+/* label.MuiInputLabel-root {
   color: var(--foreground) !important;
-}
+} */
+
+/* <label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root" data-shrink="true" for="outlined-basic" id="outlined-basic-label">Search</label> */
+
+/* #outlined-basic {
+  color: var(--foreground) !important;
+} */
+
+/* input.MuiInputBase-input {
+  color: var(--foreground) !important;
+} */
+
+/* <div class="MuiFormControl-root MuiTextField-root page-module__E0kJGG__tableContainer css-1xp5r68-MuiFormControl-root-MuiTextField-root"><label class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root" data-shrink="true" for="outlined-basic" id="outlined-basic-label">Search</label><div class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root"><input aria-invalid="false" id="outlined-basic" type="text" class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input" value="columbus"><fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"><legend class="css-w1u3ce"><span>Search</span></legend></fieldset></div></div> */
+/* <div class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-quhxjy-MuiInputBase-root-MuiOutlinedInput-root">
+  <input aria-invalid="false" id="outlined-basic" type="text" class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input" value="columbus">
+  <fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline">
+    <legend class="css-w1u3ce"><span>Search</span></legend>
+  </fieldset>
+</div> */
+
+/* div.MuiInputBase-root {
+  color: var(--foreground) !important;
+} */
+
+/* <input aria-invalid="false" id="outlined-basic" type="text" class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input" value="columbus"> */
