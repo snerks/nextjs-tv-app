@@ -98,40 +98,42 @@ export default function Home() {
         <Button variant="contained" onClick={() => GetTvShowResults()}>Search TV Shows</Button>
         {/* <pre>{JSON.stringify(tvShowSearchItems, null, 2)}</pre> */}
 
-        <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 200 }} aria-label="simple table" className={styles.tableContainer}>
-            <TableHead>
-              <TableRow>
-                <TableCell className={styles.tableContainer}>Name</TableCell>
-                <TableCell className={styles.tableContainer}>Genre</TableCell>
-                <TableCell className={styles.tableContainer}></TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {tvShowSearchItems.map(item => (
-                <TableRow
-                  key={item.show.id}
-                  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                >
-                  <TableCell component="th" scope="row" className={styles.tableContainer}>
-                    {item.show.name}
-                  </TableCell>
-                  <TableCell className={styles.tableContainer}>{item.show.genres[0]}</TableCell>
-                  <TableCell>{item.show.image && (
-                    // <img src={item.show.image.medium} />
-                    <Image
-                      aria-hidden
-                      src={item.show.image.medium}
-                      alt="TV show image"
-                      width={96}
-                      height={144}
-                    />
-                  )}</TableCell>
+        {tvShowSearchItems && tvShowSearchItems.length > 0 &&
+          <TableContainer component={Paper}>
+            <Table sx={{ minWidth: 200 }} aria-label="simple table" className={styles.tableContainer}>
+              <TableHead>
+                <TableRow>
+                  <TableCell className={styles.tableContainer}>Name</TableCell>
+                  <TableCell className={styles.tableContainer}>Genre</TableCell>
+                  <TableCell className={styles.tableContainer}></TableCell>
                 </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
+              </TableHead>
+              <TableBody>
+                {tvShowSearchItems.map(item => (
+                  <TableRow
+                    key={item.show.id}
+                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                  >
+                    <TableCell component="th" scope="row" className={styles.tableContainer}>
+                      {item.show.name}
+                    </TableCell>
+                    <TableCell className={styles.tableContainer}>{item.show.genres[0]}</TableCell>
+                    <TableCell>{item.show.image && (
+                      // <img src={item.show.image.medium} />
+                      <Image
+                        aria-hidden
+                        src={item.show.image.medium}
+                        alt="TV show image"
+                        width={96}
+                        height={144}
+                      />
+                    )}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
+        }
       </main>
 
       <footer className={styles.footer}>
